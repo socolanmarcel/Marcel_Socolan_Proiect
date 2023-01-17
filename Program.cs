@@ -1,7 +1,15 @@
+using Marcel_Socolan_Proiect.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<ApplicationContext>(opt =>
+{
+    opt.UseSqlite("Data Source=Database.db");
+});
 
 var app = builder.Build();
 
