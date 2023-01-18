@@ -6,7 +6,9 @@ public class Route
 {
     [Key]
     public Guid Id { get; set; }
+    [Display(Name = "Timpul de plecare")]
     public DateTime DepartureTime { get; set; }
+    [Display(Name = "Timpul de sosire")]
     public DateTime ArrivalTime { get; set; }
 
     // O ruta are multi pasageri.
