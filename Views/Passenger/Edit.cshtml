@@ -1,0 +1,34 @@
+@model Marcel_Socolan_Proiect.Models.Passenger
+
+<form method="post" asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edititeza pasagerul</h2>
+            <hr/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="IdentityCode"></label>
+            <input asp-for="IdentityCode" class="form-control" />
+            <span asp-validation-for="IdentityCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Age"></label>
+            <input asp-for="Age" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Salveaza</button>
+        <a asp-controller="Passenger" asp-action="Index" class="btn btn-primary" style="width:150px">
+            Inapoi la lista de pasageri
+        </a>
+    </div>
+</form>

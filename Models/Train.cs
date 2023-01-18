@@ -4,6 +4,11 @@ namespace Marcel_Socolan_Proiect.Models;
 
 public class Train
 {
+    public Train()
+    {
+        Routes = new HashSet<Route>();
+    }
+
     [Key]
     public int Id { get; set; }
     [Display(Name = "Viteza")]
@@ -11,9 +16,10 @@ public class Train
     [Display(Name = "Capacitate de persoane")]
     public long Capacity { get; set; }
     // Fiecare tren are un conductor responsabil.
-    public Guid ResponsibleConductorId { get; set; }
+    
+    public Guid? ResponsibleConductorId { get; set; }
     [Display(Name = "Conductator")]
-    public Conductor ResponsibleConductor { get; set; }
+    public Conductor? ResponsibleConductor { get; set; }
 
     // Un tren are multe rute pe zi.
     public ICollection<Route> Routes { get; set; }

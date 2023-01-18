@@ -1,0 +1,41 @@
+@model Conductor
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Adauga conductor</h2>
+            <hr/>
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control"/>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control"/>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EmployeeCode"></label>
+            <input asp-for="EmployeeCode" class="form-control"/>
+            <span asp-validation-for="EmployeeCode" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="WorkingHoursPerDay"></label>
+            <input asp-for="WorkingHoursPerDay" class="form-control"/>
+            <span asp-validation-for="WorkingHoursPerDay" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control"/>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Adauga</button>
+        <a asp-controller="Conductor" asp-action="Index" class="btn btn-primary" style="width:150px">
+            Inapoi la lista de conductori
+        </a>
+    </div>
+</form>
+
